@@ -1,0 +1,36 @@
+{
+  "name": "ecommercesite",
+  "version": "1.0.0",
+  "description": "E-Commerce MERN Application",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karandeeppotato/SmartCart.git"
+  },
+  "author": "Karandeep Singh Sehgal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karandeeppotato/SmartCart/issues"
+  },
+  "homepage": "https://github.com/karandeeppotato/SmartCart#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+  }
+}
